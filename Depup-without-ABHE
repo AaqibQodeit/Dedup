@@ -56,3 +56,5 @@ def deduplicate_directory(source_dir, dest_dir):
     print(f"Number of page faults: {num_page_faults}")
     print(f"Number of voluntary context switches: {num_voluntary_context_switches}")
     print(f"Number of involuntary context switches: {num_involuntary_context_switches}")
+    
+deduplicate_directory('/content/folder2', '/content/folder1')
