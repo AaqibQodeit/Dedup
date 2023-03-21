@@ -19,7 +19,7 @@ for i in range(1, 251):
         f2.write(content)
 
 # create unique files in folder2
-for i in range(1, 51):
-    filename = f"file_{i + 300}.txt"
+for i in range(1, 251):
+    filename = f"file_{i + 500}.txt"
     with open(f"folder2/{filename}", "w") as f:
         f.write(f"This is file {i} in folder2")
