@@ -1,0 +1,33 @@
+import matplotlib.pyplot as plt
+
+# Metrics data
+cpu_times = [0.06, 0.06, 0.03]
+max_res_set_sizes = [17600, 17452, 11676]
+page_faults = [1, 0, 0]
+vol_ctx_switches = [3, 0, 1]
+invol_ctx_switches = [3, 1, 0]
+
+# Plot the metrics as line graphs
+fig, axs = plt.subplots(ncols=5, nrows=1, figsize=(20,5))
+
+axs[0].plot(cpu_times)
+axs[0].set_xlabel('Configuration')
+axs[0].set_ylabel('CPU Time')
+
+axs[1].plot(max_res_set_sizes)
+axs[1].set_xlabel('Configuration')
+axs[1].set_ylabel('Max Resident Set Size')
+
+axs[2].plot(page_faults)
+axs[2].set_xlabel('Configuration')
+axs[2].set_ylabel('Number of Page Faults')
+
+axs[3].plot(vol_ctx_switches)
+axs[3].set_xlabel('Configuration')
+axs[3].set_ylabel('Number of Voluntary Context Switches')
+
+axs[4].plot(invol_ctx_switches)
+axs[4].set_xlabel('Configuration')
+axs[4].set_ylabel('Number of Involuntary Context Switches')
+
+plt.show()
